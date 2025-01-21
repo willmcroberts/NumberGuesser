@@ -14,16 +14,16 @@ int  main() {
 
 	printf("What is your name?: "); // prompt user input for name
 	scanf("%s", name); // is the actaul input prompt
-	printf("Hello, %s \n", name); // greet the user and say what the game is
+	printf("Hello %s, let's play a game. \n", name); // greet the user and say what the game is
 
 	srand(time(NULL)); // Makes it so there is a new random number each time
-	correct = rand() % 100; // correct gets the random number
+	correct = rand() % 100 + 1 ; // correct gets the random number 1-100
 	// printf("%d \n", correct);
 	
 	// start of while loop that is pretty much the entire game
 	while(keepGoing) {
 		tries++;
-		printf("Try %d, Enter your guess: ", tries);
+		printf("Try %d, Enter your guess (1-100): ", tries);
 		scanf("%d", &guess);
 
 		if (guess < correct) {
