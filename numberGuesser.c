@@ -1,16 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+// #include <stdbool.h> // Creates real Boolean (not used in this program)
 
+// Creates fake Boolean
 #define TRUE -1;
 #define FALSE 0;
 
 int  main() {
+	// Intialize variables
 	int guess;
 	int correct;
 	int tries = 0;
 	int keepGoing = TRUE;
-	char name[20];
+	char name[20]; // char needs a charcter length []
 
 	printf("What is your name?: "); // prompt user input for name
 	scanf("%s", name); // is the actaul input prompt
@@ -22,9 +25,9 @@ int  main() {
 	
 	// start of while loop that is pretty much the entire game
 	while(keepGoing) {
-		tries++;
+		tries++; // Adds one to tries
 		printf("Try %d, Enter your guess (1-100): ", tries);
-		scanf("%d", &guess);
+		scanf("%d", &guess); // guess gets user input number
 
 		if (guess < correct) {
 			printf("Too Low! \n");
