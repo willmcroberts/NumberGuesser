@@ -17,7 +17,7 @@ int  main() {
 	printf("Hello %s, let's play a game. \n", name); // greet the user and say what the game is
 
 	srand(time(NULL)); // Makes it so there is a new random number each time
-	correct = rand() % 100 + 1 ; // correct gets the random number 1-100
+	correct = (rand() % 100) + 1 ; // correct gets the random number 1-100
 	// printf("%d \n", correct);
 	
 	// start of while loop that is pretty much the entire game
@@ -38,7 +38,7 @@ int  main() {
 		} // end elif statments
 	} // ends while loop
 	
-	printf("It took %d tries \n", tries); // prints amount of tries and where they placed
+	printf("It took you %d tries \n", tries); // prints amount of tries and where they placed
 	if (tries == 7) {
 		printf("You are average, %s \n", name);
 	} else if (tries > 7 ){
