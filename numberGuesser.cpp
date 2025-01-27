@@ -46,4 +46,6 @@ int main() {
 	} else {
 		std::cout << "You are above average, " << userName << std::endl;
 	} // end elif statement
+
+	return 0;
 } // end main
